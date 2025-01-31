@@ -221,7 +221,7 @@ type User = {
     age?: number;
   };
   
-  const constantUserFields: Readonly<User> = {
+  const constantUserFields: User = {
     id: 1,
     name: "Karan",
   };
