@@ -418,12 +418,24 @@
 
 // console.log(months)
 
-enum UserRole {
-  Admin = 10,
-  Editor = 20,
-  Viewer = 30,
+// enum UserRole {
+//   Admin = 10,
+//   Editor = 20,
+//   Viewer = 30,
+// }
+
+// const isAdmin = (val: number): boolean => {
+//   return val === 10 ? true : false;
+// };
+
+enum PaymentStatus {
+  Pending = "Payment Is Still Pending",
+  Completed = "Payment Is Completed 🎉",
+  Failed = "Payment Is Failed 🥲",
 }
 
-const isAdmin = (val: number): boolean => {
-  return val === 10 ? true : false;
+const paymentVerifier = (val: string): string => {
+  return Object.values(PaymentStatus).includes(val as PaymentStatus)
+    ? val
+    : "Invalid Payment Status";
 };
