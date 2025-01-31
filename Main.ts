@@ -282,3 +282,26 @@
 // // Example usage
 // const updatedEmployee = updateSalary(readonlyEmployee, { salary: 45000 });
 // console.log(updatedEmployee);
+
+// 7️⃣ Problem: Dynamic Form Field Updates
+// You are building a form where some fields are required, and others are optional.
+
+// Define a FormData type with username, password, and email.
+// Use Required to enforce that username and password are mandatory fields.
+// Use Partial to allow email to be optional.
+
+type formDataObj = { username: string; password: string; email?: string };
+
+const requiredFields: formDataObj = {
+  username: "Karan Sapra",
+  password: "1123#343q324",
+};
+
+const updateProfile = (
+  formData: formDataObj,
+  updateObj: Partial<formDataObj>
+) => {
+  return { ...formData, ...updateObj };
+};
+
+updateProfile(requiredFields, { email: "test@test.com" });
