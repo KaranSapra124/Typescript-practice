@@ -290,18 +290,61 @@
 // Use Required to enforce that username and password are mandatory fields.
 // Use Partial to allow email to be optional.
 
-type formDataObj = { username: string; password: string; email?: string };
+// type formDataObj = { username: string; password: string; email?: string };
 
-const requiredFields: formDataObj = {
-  username: "Karan Sapra",
-  password: "1123#343q324",
-};
+// const requiredFields: formDataObj = {
+//   username: "Karan Sapra",
+//   password: "1123#343q324",
+// };
 
-const updateProfile = (
-  formData: formDataObj,
-  updateObj: Partial<formDataObj>
-) => {
-  return { ...formData, ...updateObj };
-};
+// const updateProfile = (
+//   formData: formDataObj,
+//   updateObj: Partial<formDataObj>
+// ) => {
+//   return { ...formData, ...updateObj };
+// };
 
-updateProfile(requiredFields, { email: "test@test.com" });
+// updateProfile(requiredFields, { email: "test@test.com" });
+
+// Basic Understanding of Enums
+// Define an enum called Weekdays that represents the days of the week. Assign Monday as 0, Tuesday as 1, and so on.
+
+// What will be the value of Weekdays.Monday?
+// Create a string enum called Response with values Yes, No, and Maybe.
+
+// What is the value of Response.Yes?
+// Write an enum called TrafficLight with values Red, Yellow, and Green.
+
+// What would be the numeric value of TrafficLight.Green if Red = 0 and Yellow = 1?
+// Create a function getDayName that takes an enum value from the Weekdays enum and returns the name of the day in string format.
+
+// // Question 1
+// enum Weekdays {
+//   Monday = 0,
+//   Tuesday = 1,
+//   wednesday = 2,
+//   Thursday = 3,
+//   Friday = 4,
+//   Saturday = 5,
+//   Sunday = 6,
+// }
+
+// console.log(Weekdays.Monday) //0
+
+// Question 2
+
+// enum ResponseEnum {
+//   Yes,
+//   No,
+//   Maybe,
+// }
+// console.log(ResponseEnum.Yes) //0
+
+// Question 3
+enum TrafficLight {
+  Red,
+  yellow,
+  green,
+}
+
+console.log(TrafficLight.green)//2
