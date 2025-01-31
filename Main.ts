@@ -388,13 +388,42 @@
 // }
 
 // console.log(TrafficLight.Red) //0
+// Question 7
+// enum OrderStatus {
+//   Pending = 0,
+//   Shipped = 1,
+//   Delivered = 2,
+// }
 
-enum OrderStatus {
-  Pending = 0,
-  Shipped = 1,
-  Delivered = 2,
+// const isOrderShipped = (status: number) => {
+//   return status !== 1 ? false : true;
+// };
+
+// Enum with Computed Values
+// Write a program that computes enum values dynamically (like based on user input or date).
+// For example, calculate the enum values for a set of months, where January = 1, February = 2, and so on.
+
+// Create an enum called UserRole that has Admin, Editor, and Viewer. Assign numeric values manually to each role, where Admin = 10, Editor = 20, and Viewer = 30.
+
+// Write a function isAdmin that checks if a user has an admin role.
+// Create a string enum PaymentStatus with values Pending, Completed, and Failed. Write a function that takes a PaymentStatus and returns a message that includes the status description.
+
+// const getMonthNumber = (month: string): number => {
+//     return new Date(`${month} 1 , 2000`).getMonth() + 1;
+// };
+// enum months {
+//     January = getMonthNumber("January"),
+//     February = getMonthNumber("February")
+// }
+
+// console.log(months)
+
+enum UserRole {
+  Admin = 10,
+  Editor = 20,
+  Viewer = 30,
 }
 
-const isOrderShipped = (status: number) => {
-  return status !== 1 ? false : true;
+const isAdmin = (val: number): boolean => {
+  return val === 10 ? true : false;
 };
