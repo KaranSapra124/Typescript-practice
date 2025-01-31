@@ -102,7 +102,6 @@
 // //     readonly student_gender: number;
 // // }
 
-
 // // // Your HR system stores employee data. Define a base interface EmployeeBase with common properties like id, name, and email. Then, extend it to create FullTimeEmployee and PartTimeEmployee interfaces with additional properties (salary for full-time, hourlyRate for part-time).
 
 // // interface EmployeeBase {
@@ -174,14 +173,12 @@
 //     return { ...UserProfileData, ...updatedProfileData }
 // }
 
-
 // // Problem: Immutable Product Data
 // // You are creating a product catalog, and once a product is added, it should not be modified.
 
 // // Define a Product type with id (number), name (string), price (number).
 // // Use Readonly to make the product data immutable.
 // // Create a product object and try to modify one of its properties. It should throw an error.
-
 
 // type productCatalog = {
 //     id: number,
@@ -215,24 +212,25 @@
 // // Create a function updateUser that accepts an object with id and name as required fields, and email and age as optional fields using Partial.
 
 type User = {
-    readonly id: number;
-    readonly name: string;
-    email?: string;
-    age?: number;
-  };
-  
-  const constantUserFields: User = {
-    id: 1,
-    name: "Karan",
-  };
-  
-  const optionalUserFields: Partial<User> = {
-    email: "test@test.com",
-    age: 23,
-  };
-  
-  const updateProfile =(constantFields:User,optionalFields:Partial<User>)=>{
-      return {...constantUserFields,...optionalUserFields}
-  }
-  
+  readonly id: number;
+  readonly name: string;
+  email?: string;
+  age?: number;
+  gender?: string;
+};
+
+const constantUserFields: User = {
+  id: 1,
+  name: "Karan",
+};
+
+const optionalUserFields: Partial<User> = {
+  email: "test@test.com",
+  age: 23,
+};
+
+const updateProfile = (constantFields: User, optionalFields: Partial<User>) => {
+  return { ...constantUserFields, ...optionalUserFields };
+};
+
 //   Awesome
