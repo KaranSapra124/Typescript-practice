@@ -341,10 +341,50 @@
 // console.log(ResponseEnum.Yes) //0
 
 // Question 3
-enum TrafficLight {
-  Red,
-  yellow,
-  green,
-}
+// enum TrafficLight {
+//   Red,
+//   yellow,
+//   green,
+// }
 
-console.log(TrafficLight.green)//2
+// console.log(TrafficLight.green)//2
+
+// Question 4
+// enum Weekdays {
+//   Monday = 0,
+//   Tuesday = 1,
+//   wednesday = 2,
+//   Thursday = 3,
+//   Friday = 4,
+//   Saturday = 5,
+//   Sunday = 6,
+// }
+// function getDayName<T>(arg: T) {
+//   return arg
+// }
+
+// console.log(Weekdays[0])//Monday
+
+// Working with Enums
+// Using a numeric enum, write a function getDirection that returns a string based on the direction number (0 = "Up", 1 = "Down", 2 = "Left", 3 = "Right").
+
+// Write a program that takes a string input representing a TrafficLight color (like "Red") and prints the corresponding numeric value from the enum.
+
+// Write an enum for OrderStatus where Pending = 0, Shipped = 1, and Delivered = 2. Write a function isOrderShipped that checks whether an order has been shipped.
+// Question 5
+// enum direction {
+//   Up = 0,
+//   Down = 1,
+//   Left = 2,
+//   Right = 3,
+// }
+
+// console.log(direction[1]);
+// Question 6
+// enum TrafficLight {
+//   Red,
+//   Yellow,
+//   Green,
+// }
+
+// console.log(TrafficLight.Red) //0
