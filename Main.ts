@@ -388,3 +388,13 @@
 // }
 
 // console.log(TrafficLight.Red) //0
+
+enum OrderStatus {
+  Pending = 0,
+  Shipped = 1,
+  Delivered = 2,
+}
+
+const isOrderShipped = (status: number) => {
+  return status !== 1 ? false : true;
+};
