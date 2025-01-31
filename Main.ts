@@ -240,13 +240,45 @@
 // Use Readonly to make the Role name immutable.
 // Use Partial to allow modifying only the permissions.
 
-type RoleSystemType = {
-  readonly name: string;
-  permissions: string[];
-};
+// type RoleSystemType = {
+//   readonly name: string;
+//   permissions: string[];
+// };
 
-const rolePermissions: Partial<RoleSystemType> = {
-  permissions: ["Mobile", "Location"],
-};
+// const rolePermissions: Partial<RoleSystemType> = {
+//   permissions: ["Mobile", "Location"],
+// };
 
+// 6️⃣ Problem: Readonly Object with Update Function
+// You have an immutable object, but you want to implement a function that can update certain fields using Partial.
 
+// Define an Employee type with id, name, position, and salary.
+// Create a readonlyEmployee object.
+// Write a function updateSalary that can update the salary field using Partial, but leaves other properties unchanged.
+
+// type employeeType = {
+//   readonly id: number;
+//   readonly name: string;
+//   readonly position: string;
+//   readonly salary: number;
+// };
+
+// // Immutable employee object
+// const readonlyEmployee: employeeType = {
+//   id: 1,
+//   name: "John Doe",
+//   position: "Software Engineer",
+//   salary: 40000,
+// };
+
+// // Function to update salary (only salary can be updated)
+// const updateSalary = (
+//   employee: employeeType,
+//   data: Partial<employeeType> // Allow partial update of employee
+// ) => {
+//   return { ...employee, ...data }; // Merging existing employee data with new updates
+// };
+
+// // Example usage
+// const updatedEmployee = updateSalary(readonlyEmployee, { salary: 45000 });
+// console.log(updatedEmployee);
